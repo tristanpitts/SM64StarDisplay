@@ -526,9 +526,9 @@ namespace StarDisplay
             byte[] stars = data;
             if (stars == null) return;
 
-            int starCounter = countStars((byte)(data[0]), 7);
+            int starCounter = countStars((byte)(data[8]), 7);
             // Fix star counter
-            for (int i = 0xB - 7; i < 0x24 - 7; i++)
+            for (int i = 0xC; i < 0x25; i++)
             {
                 starCounter += countStars((byte)(data[i]), 7);
             }
